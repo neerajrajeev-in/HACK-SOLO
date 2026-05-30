@@ -159,7 +159,7 @@ Do not use these techniques against systems without permission.
 
 ## Author
 
-SOLO Pentesting Lab
+HACK SOLO
 
 Cybersecurity Student Project
 
