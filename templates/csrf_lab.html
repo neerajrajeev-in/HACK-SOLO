@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Lab</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+        }
+
+        .header {
+            text-align: center;
+            padding: 25px;
+            border-bottom: 1px solid #00ff00;
+        }
+
+        .header h2 {
+            font-size: 32px;
+            letter-spacing: 3px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+
+        .card {
+            border: 1px solid #00ff00;
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 25px #00ff00;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 15px 0;
+            background: black;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            font-family: monospace;
+            outline: none;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            background: black;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: monospace;
+        }
+
+        button:hover {
+            background: #00ff00;
+            color: black;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px dashed #00ff00;
+            font-size: 14px;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h2>⚠️ CSRF LAB TERMINAL ⚠️</h2>
+    <p class="blink">[ CHANGE EMAIL SIMULATION ENVIRONMENT ]</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <h3>CHANGE EMAIL</h3>
+
+        <form method="POST">
+            <input type="email" name="email" placeholder="Enter new email">
+            <button type="submit">EXECUTE UPDATE</button>
+        </form>
+
+        <div class="status">
+            CURRENT EMAIL: {{ email }}
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

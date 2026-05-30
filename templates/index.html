@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SOLO / HACK SOLO LAB</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #00ff00;
+}
+
+.header h1 {
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+/* container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+/* card */
+.card {
+    border: 1px solid #00ff00;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* links */
+a {
+    display: block;
+    margin: 15px 0;
+    padding: 12px;
+    text-decoration: none;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #00ff00;
+    color: black;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+/* blink */
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>💀 HACK SOLO 💀</h1>
+    <p class="blink">[ PENETRATION TESTING LAB ENVIRONMENT ]</p>
+</div>
+
+<div class="container">
+
+    <!-- BEGINNER LABS -->
+    <div class="card">
+        <h2>BEGINNER LABS</h2>
+        <a href="/login">🔐 SQL INJECTION LAB</a>
+        <a href="/xss">💥 XSS LAB</a>
+    </div>
+
+    <!-- AUTH & ACCESS -->
+    <div class="card">
+        <h2>AUTH & ACCESS</h2>
+        <a href="/user/1">🔓 IDOR LAB</a>
+        <a href="/change-email">🛡️ CSRF LAB </a>
+    </div>
+
+    <!-- ADVANCED LABS -->
+    <div class="card">
+        <h2>ADVANCED LABS</h2>
+        <a href="/cmd">⚡ COMMAND INJECTION LAB</a>
+        <a href="/upload">📂 FILE UPLOAD LAB</a>
+    </div>
+
+</div>
+
+</body>
+</html>

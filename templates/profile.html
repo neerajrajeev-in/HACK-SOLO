@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IDOR Lab - Secure Profile Viewer</title>
+
+<style>
+body {
+    margin: 0;
+    background: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+}
+
+/* Top Header */
+.header {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #00ff00;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+/* Terminal Box */
+.terminal {
+    width: 70%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+    background: rgba(0, 255, 0, 0.05);
+}
+
+/* Prompt style */
+.prompt {
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+/* Data block */
+.data {
+    margin-top: 20px;
+    padding: 10px;
+    border-left: 3px solid #00ff00;
+}
+
+.label {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.value {
+    color: #ffffff;
+}
+
+/* blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background: #00ff00;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>HACK SOLO LAB // IDOR SIMULATION ENVIRONMENT</h1>
+</div>
+
+<div class="terminal">
+
+    <div class="prompt">
+        root@lab:~$ access user_profile --id {{ user_id }}
+    </div>
+
+    <p>Loading secure profile module<span class="cursor"></span></p>
+
+    <div class="data">
+        <p><span class="label">USER ID:</span> {{ user_id }}</p>
+        <p><span class="label">NAME:</span> {{ user.name }}</p>
+        <p><span class="label">EMAIL:</span> {{ user.email }}</p>
+    </div>
+
+    <p class="prompt">status: profile fetched successfully</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HACK SOLO | XSS LAB</title>
+
+    <!-- CSS PATH -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="scanline"></div>
+
+<div class="container">
+
+    <h1 class="logo">HACK SOLO</h1>
+    <p class="tag">XSS PRACTICE PENTEST LAB</p>
+
+    <div class="panel">
+
+        <form method="POST">
+            <input type="text" name="name" placeholder="Enter XSS Payload">
+            <button type="submit">EXECUTE</button>
+        </form>
+
+        <div class="result">
+            <h3>OUTPUT:</h3>
+            <p>Hello 👉 {{ name | safe }}</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

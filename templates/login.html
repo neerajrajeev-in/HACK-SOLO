@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HACK SOLO | SQLi LAB</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="logo">HACK SOLO</h1>
+    <p class="tag">SQL INJECTION PRACTICE LAB</p>
+
+    <div class="panel">
+
+        <form method="POST">
+
+            <input type="text" name="username" placeholder="Username">
+
+            <input type="password" name="password" placeholder="Password">
+
+            <button type="submit">LOGIN</button>
+
+        </form>
+
+        <div class="output">
+            <p>STATUS: {{ message }}</p>
+        </div>
+
+        <p class="hint">Hint: Try SQL Injection Payloads</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

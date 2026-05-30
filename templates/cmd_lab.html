@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Command Injection Lab</title>
+
+<style>
+body {
+    margin: 0;
+    background: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #00ff00;
+}
+
+.header h2 {
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+/* Terminal container */
+.terminal {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+    background: rgba(0, 255, 0, 0.04);
+}
+
+/* Prompt line */
+.prompt {
+    margin-bottom: 15px;
+    color: #00ff00;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    background: black;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    background: #00ff00;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00cc00;
+}
+
+/* Output box */
+.output {
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 3px solid #00ff00;
+    background: rgba(0, 255, 0, 0.05);
+    min-height: 80px;
+    white-space: pre-wrap;
+}
+
+/* blinking cursor */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: #00ff00;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* status line */
+.status {
+    margin-top: 10px;
+    color: #00ff00;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h2>HACK SOLO LAB // COMMAND INJECTION SIMULATOR</h2>
+</div>
+
+<div class="terminal">
+
+    <div class="prompt">
+        root@lab:~$ run_ping_module<span class="cursor"></span>
+    </div>
+
+    <form method="POST">
+        <input type="text" name="host" placeholder="Enter IP Address (e.g. 8.8.8.8)">
+        <button type="submit">EXECUTE</button>
+    </form>
+
+    <div class="status">
+        [+] Waiting for target input...
+    </div>
+
+    <hr style="border: 1px solid #00ff00; opacity: 0.3;">
+
+    <div class="output">
+        {{ output }}
+    </div>
+
+</div>
+
+</body>
+</html>
