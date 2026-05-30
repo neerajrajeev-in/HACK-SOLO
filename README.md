@@ -87,8 +87,8 @@ SOLO/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/solo-pentesting-lab.git
-cd solo-pentesting-lab
+https://github.com/neerajrajeev-in/HACK-SOLO.git
+cd HACK-SOLO
 ```
 
 ### Create Virtual Environment
